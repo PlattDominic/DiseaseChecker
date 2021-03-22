@@ -14,6 +14,9 @@ def main():
         print("get better soon")
         main()
 
+    elif Symp == "chest pain":
+        pass
+
 
 
 

@@ -15,7 +15,7 @@ def main():
         main()
 
     elif Symp == "chest pain":
-        passw
+        pass
 
 
 

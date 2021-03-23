@@ -29,7 +29,7 @@ def main():
     if user_symptoms == "sym": 
         for sym in symptoms:
             print("{}, ".format(sym))
-    
+            
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
 
@@ -42,9 +42,5 @@ def main():
             main()
             break 
     
-    for disease in diseases:
-        print(diseases[disease])
-        for symp in diseases[disease]:
-            if symp in symptoms_list:
-                print("You have {}".format(disease))
+
 main()

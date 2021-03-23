@@ -55,6 +55,6 @@ def main():
     
     
     set_convert = list(duplicate_diseases)
-    print("A possilbe disease you might have: {}".format(set_convert[0]))
+    print("A possible disease you might have: {}".format(set_convert[0]))
 
 main()

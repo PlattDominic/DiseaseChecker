@@ -48,4 +48,10 @@ def main():
             if user_symp.replace(" ", "") in diseases[disease]:
                 possible_diseases.append(disease)
 
+    duplicate_diseases = set()
+    for disease in possible_diseases:
+        if possible_diseases.count(disease) > 1:
+            duplicate_diseases.add(disease)
+    print(duplicate_diseases)
+
 main()

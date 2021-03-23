@@ -47,7 +47,5 @@ def main():
         for disease in diseases:
             if user_symp.replace(" ", "") in diseases[disease]:
                 possible_diseases.append(disease)
-    
-    print(possible_diseases)
 
 main()

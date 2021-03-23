@@ -11,15 +11,15 @@ def main():
     
     # The dictionary that will contain all the possible diseases with their symtoms
     diseases = {
-    'common_cold': ('cough', 'congestion', 'sneezing'), 
+    'common cold': ('cough', 'congestion', 'sneezing'), 
     'flu': ('cough', 'fever', 'sore throat'),
     'asthma': ('shortness of breath', 'chest pain', 'wheezing'),
     'bronchitis': ('fatigue', 'cough', 'chest discomfort'),
-    'covid_19': ('cough', 'headache', 'fever', 'lost of scent'),
+    'covid 19': ('cough', 'headache', 'fever', 'lost of scent'),
     'diabetes': ('fatigue', 'high hunger', 'messed urnination cycle'),
     'ebola': ('fever', 'stomach pain', 'unexplained bleeding'),
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
-    'lung_cancer': ('hoarseness', 'loss appetite', 'cough', "shortness of breath"),
+    'lung cancer': ('hoarseness', 'loss appetite', 'cough', "shortness of breath"),
     'stroke': ('numbness', 'trouble walking', 'confusion')}
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms

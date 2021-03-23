@@ -32,9 +32,6 @@ def main():
     
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
-
-   
-        
     
     # Restarts the program if you write an invalid symptom
     for sym in symptoms_list:

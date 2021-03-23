@@ -25,7 +25,7 @@ def main():
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
     user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')
     
-    #prints out all available symptoms in an organized format
+    # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
         for sym in symptoms:
             print("{}, ".format(sym))
@@ -36,4 +36,15 @@ def main():
    
         
     
+    # Restarts the program if you write an invalid symptom
+    for sym in symptoms_list:
+        if sym.replace(" ", "") not in symptoms:
+            print("you wrote something that's not in our list of symptoms, please try again")
+            del user_symptoms
+            del symptoms_list
+            main()
+            break 
+    
+    for disease in diseases:
+        print(disease)
 main()

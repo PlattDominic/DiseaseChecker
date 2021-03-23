@@ -33,9 +33,7 @@ def main():
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
 
-    for sym in symptoms_list:
-        if sym not in symptoms:
-            print("you wrote something that's not in our list of symptoms, please try again")
-            main() 
+   
+        
     
 main()

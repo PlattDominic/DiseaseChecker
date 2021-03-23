@@ -25,5 +25,7 @@ def main():
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
     user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')
     
-
+    if user_symptoms == "sym": 
+        for sym in symptoms:
+            print("{}, ".format(sym))
 main()

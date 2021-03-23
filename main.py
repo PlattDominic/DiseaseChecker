@@ -49,4 +49,7 @@ def main():
     symptoms_list = user_symptoms.split(',')
     
 
+    if user_symptoms == "sym": 
+        for sym in symptoms:
+            print("{}, ".format(sym))
 main()

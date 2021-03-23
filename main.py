@@ -29,6 +29,8 @@ def main():
     if user_symptoms == "sym": 
         for sym in symptoms:
             print("{}, ".format(sym))
+        del user_symptoms
+        main()
             
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')

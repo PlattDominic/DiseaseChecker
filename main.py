@@ -16,7 +16,8 @@ def main():
     'lung_cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
     'stroke': ('numbness', 'trouble_walking', 'confusion')}
     
-
-
+    # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
+    user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')
+    
 
 main()

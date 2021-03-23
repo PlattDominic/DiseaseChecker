@@ -26,4 +26,27 @@ def main():
     user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    # Stores the user symptoms into a list
+    symptoms_list = user_symptoms.split(',')
+    
+
 main()

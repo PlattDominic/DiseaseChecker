@@ -44,4 +44,7 @@ def main():
     
     for disease in diseases:
         print(diseases[disease])
+        for symp in diseases[disease]:
+            if symp in symptoms_list:
+                print("You have {}".format(disease))
 main()

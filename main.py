@@ -32,7 +32,7 @@ def main():
             
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
-
+    
     # Restarts the program if you write an invalid symptom
     for sym in symptoms_list:
         if sym.replace(" ", "") not in symptoms:
@@ -41,6 +41,13 @@ def main():
             del symptoms_list
             main()
             break 
+
+    diseases = []
+    for user_symp in symptoms_list:
+        for disease in diseases:
+            if user_symp.replace(" ", "") in diseases[disease]:
+                diseases.append(disease)
     
 
+    print(diseases)
 main()

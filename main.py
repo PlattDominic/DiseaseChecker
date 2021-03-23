@@ -42,12 +42,12 @@ def main():
             main()
             break 
 
-    diseases = []
+    possible_diseases = []
     for user_symp in symptoms_list:
         for disease in diseases:
             if user_symp.replace(" ", "") in diseases[disease]:
-                diseases.append(disease)
+                possible_diseases.append(disease)
     
+    print(possible_diseases)
 
-    print(diseases)
 main()

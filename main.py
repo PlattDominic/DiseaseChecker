@@ -2,7 +2,10 @@
 
 # This is the main fucntion
 def main():
-    symptoms = {'common_cold': ('cough', 'congestion', 'sneezing'), 
+
+    # The dictionary that will contain all the possible diseases with their symtoms
+    diseases = {
+    'common_cold': ('cough', 'congestion', 'sneezing'), 
     'flu': ('cough', 'fever', 'sore_throat'),
     'asthma': ('shortness_of_breath', 'chest_pain', 'wheezing'),
     'bronchitis': ('fatigue', 'cough', 'chest_discomfort'),
@@ -12,7 +15,7 @@ def main():
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
     'lung_cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
     'stroke': ('numbness', 'trouble_walking', 'confusion')}
- 
+    
 
 
 

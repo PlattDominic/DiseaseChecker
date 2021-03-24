@@ -62,7 +62,7 @@ def main():
             duplicate_diseases.add(disease)
     
     if len(duplicate_diseases) < 1:
-        print("error")
+        print("this is a test")
 
     #Converts a set into a list, so the daya can be indexed
     #And also prints out what disease the user might have

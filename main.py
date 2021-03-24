@@ -28,13 +28,6 @@ def main():
     # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
         for sym in symptoms:
-<<<<<<< HEAD
-            # print("{}, ".format(sym))
-            print("test")
-        main()            
-
-=======
->>>>>>> c04a0b7527ec2f433f05f348ccba1140829a7e4d
             print("{}, ".format(sym))
         del user_symptoms
         main()

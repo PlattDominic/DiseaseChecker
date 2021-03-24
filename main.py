@@ -64,4 +64,10 @@ def main():
     set_convert = list(duplicate_diseases)
     print("A possible disease you might have: {}".format(set_convert[0]))
 
+    again = input("Would you like to name more symptoms?")
+    if again == "yes":
+        main()
+    elif again == "no":
+        print("have a good day")
+
 main()

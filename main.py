@@ -64,8 +64,8 @@ def main():
     set_convert = list(duplicate_diseases)
     print("A possible disease you might have: {}".format(set_convert[0]))
 
-# If the user wants to go again this will make it restart the program
-# But if not it will give them a nice sending message
+    # If the user wants to go again this will make it restart the program
+    # But if not it will give them a nice sending message
     again = input("Would you like to name more symptoms?")
     if again == "yes":
         main()

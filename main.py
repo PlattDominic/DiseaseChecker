@@ -79,5 +79,6 @@ def Go_Again():
         print("Feel better soon!")
 
     
-    Go_Again()
+    
 main()
+Go_Again()

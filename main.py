@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# This is the main fucntion
+# main function that runs the main code for the application
 def main():
     # A dictionary containing all the symptoms the user will type in
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore throat", 

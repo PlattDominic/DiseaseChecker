@@ -43,7 +43,9 @@ def main():
             del symptoms_list
             main()
             break 
-
+    
+    # Make a list called possible_diseases, which will store
+    # Possible diseases the user might have, according from their Symptoms
     possible_diseases = []
     for user_symp in symptoms_list:
         for disease in diseases:

@@ -50,6 +50,10 @@ def main():
             if user_symp.replace(" ", "") in diseases[disease]:
                 possible_diseases.append(disease)
 
+    # Makes a set named duplicate_diseases which will store
+    # Any disease in the possible_disease list that is
+    # Seen more than one time. We are using a set because
+    # We don't want duplicate items
     duplicate_diseases = set()
     for disease in possible_diseases:
         if possible_diseases.count(disease) > 1:

@@ -69,12 +69,13 @@ def main():
     # If the user wants to go again this will make it restart the program
     # But if not it will give them a nice sending message
 
-    again = input("Would you like to name more symptoms?")
+    
 
 def Go_Again(again):
+    again = input("Would you like to name more symptoms?")
     if again == "yes":
         main()
-    elif again == "no":j
+    elif again == "no":
         print("Feel better soon!")
 
     

@@ -30,7 +30,7 @@ def main():
         for sym in symptoms:
             print("{}, ".format(sym))
         del user_symptoms
-        main()
+        user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with ",": ')
             
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
@@ -69,5 +69,7 @@ def main():
         main()
     elif again == "no":
         print("have a good day")
+
+    
 
 main()

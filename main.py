@@ -28,8 +28,10 @@ def main():
     # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
         for sym in symptoms:
-            print("{}, ".format(sym))
-            
+            # print("{}, ".format(sym))
+            print("test")
+        main()            
+
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
     
@@ -53,7 +55,9 @@ def main():
         if possible_diseases.count(disease) > 1:
             duplicate_diseases.add(disease)
     
-    
+    #Converts a set into a list, so the daya can be indexed
+    #And also prints out what disease the user might have
+
     set_convert = list(duplicate_diseases)
     print("A possible disease you might have: {}".format(set_convert[0]))
 

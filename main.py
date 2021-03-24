@@ -63,6 +63,7 @@ def main():
     
     if len(duplicate_diseases) < 1:
         print("this is a test")
+        main()
 
     #Converts a set into a list, so the daya can be indexed
     #And also prints out what disease the user might have

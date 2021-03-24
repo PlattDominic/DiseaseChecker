@@ -71,7 +71,7 @@ def main():
 
     
 
-def Go_Again(again):
+def Go_Again():
     again = input("Would you like to name more symptoms?")
     if again == "yes":
         main()
@@ -79,5 +79,5 @@ def Go_Again(again):
         print("Feel better soon!")
 
     
-Go_Again(again)
+    Go_Again()
 main()

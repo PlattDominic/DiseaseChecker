@@ -28,10 +28,17 @@ def main():
     # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
         for sym in symptoms:
+<<<<<<< HEAD
             # print("{}, ".format(sym))
             print("test")
         main()            
 
+=======
+            print("{}, ".format(sym))
+        del user_symptoms
+        main()
+            
+>>>>>>> b178077554e98427fe6b2442e365004f2cef7341
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')
     
@@ -50,6 +57,10 @@ def main():
             if user_symp.replace(" ", "") in diseases[disease]:
                 possible_diseases.append(disease)
 
+    # Makes a set named duplicate_diseases which will store
+    # Any disease in the possible_disease list that is
+    # Seen more than one time. We are using a set because
+    # We don't want duplicate items
     duplicate_diseases = set()
     for disease in possible_diseases:
         if possible_diseases.count(disease) > 1:

@@ -63,8 +63,8 @@ def main():
     
     if len(duplicate_diseases) < 1:
         print("You only put one symptom, which might lead to unaccurate result")
-        print("The symptoms, that you might have are: ", possible_diseases)
-        main()
+        print("The diseases, that you might have are: ", possible_diseases)
+        Go_Again()
 
     #Converts a set into a list, so the daya can be indexed
     #And also prints out what disease the user might have

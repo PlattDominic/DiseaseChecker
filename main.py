@@ -62,7 +62,7 @@ def main():
             duplicate_diseases.add(disease)
     
     if len(duplicate_diseases) < 1:
-        print("You only put one symptom, which might lead to unaccurate result")
+        print("\nYou only put one symptom, which might lead to unaccurate result")
         print("The diseases, that you might have are: ", possible_diseases)
         go_again()
 

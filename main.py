@@ -3,24 +3,24 @@
 # main function that runs the main code for the application
 def main():
     # A dictionary containing all the symptoms the user will type in
-    symptoms = ["cough", "sneezing", "congestion", "fever", "sore throat", 
-    "shortness of breath", "chest pain", "wheezing", "fatigue", "chest discomfort",
-     "headache", "messed urination cycle", "stomach pain", "unexplained bleeding",
-      "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss appetite", 
-      "numbness", "trouble walking", "confusion", "lost of scent"]
+    symptoms = ["cough", "sneezing", "congestion", "fever", "sore_throat", 
+    "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
+     "headache", "messed_urination_cycle", "stomach_pain", "unexplained_bleeding",
+      "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss_appetite", 
+      "numbness", "trouble_walking", "confusion", "lost_of_scent"]
     
     # The dictionary that will contain all the possible diseases with their symtoms
     diseases = {
     'common cold': ('cough', 'congestion', 'sneezing'), 
-    'flu': ('cough', 'fever', 'sore throat'),
-    'asthma': ('shortness of breath', 'chest pain', 'wheezing'),
-    'bronchitis': ('fatigue', 'cough', 'chest discomfort'),
-    'covid 19': ('cough', 'headache', 'fever', 'lost of scent'),
-    'diabetes': ('fatigue', 'high hunger', 'messed urnination cycle'),
-    'ebola': ('fever', 'stomach pain', 'unexplained bleeding'),
+    'flu': ('cough', 'fever', 'sore_throat'),
+    'asthma': ('shortness_of_breath', 'chest_pain', 'wheezing'),
+    'bronchitis': ('fatigue', 'cough', 'chest_discomfort'),
+    'covid 19': ('cough', 'headache', 'fever', 'lost_of_scent'),
+    'diabetes': ('fatigue', 'high_hunger', 'messed_urnination_cycle'),
+    'ebola': ('fever', 'stomach_pain', 'unexplained_bleeding'),
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
-    'lung cancer': ('hoarseness', 'loss appetite', 'cough', "shortness of breath"),
-    'stroke': ('numbness', 'trouble walking', 'confusion')}
+    'lung cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
+    'stroke': ('numbness', 'trouble_walking', 'confusion')}
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
     user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')

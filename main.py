@@ -7,11 +7,12 @@ def main(user_name):
     "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
      "headache", "messed_urination_cycle", "stomach_pain", "unexplained_bleeding",
       "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss_appetite", 
-      "numbness", "trouble_walking", "confusion", "lost_of_scent"]
+      "numbness", "trouble_walking", "confusion", "lost_of_scent", "neck_pain", "numbness", "chest_pressure",
+      "vomiting", "body_aches", "chills", "mouth_ulcers", "night_sweats", "spasms", "difficulty_swallowing", "muscle_stiffness"]
     
     # The dictionary that will contain all the possible diseases with their symtoms
     diseases = {
-    'common cold': ('cough', 'congestion', 'sneezing'), 
+    'common_cold': ('cough', 'congestion', 'sneezing'), 
     'flu': ('cough', 'fever', 'sore_throat'),
     'asthma': ('shortness_of_breath', 'chest_pain', 'wheezing'),
     'bronchitis': ('fatigue', 'cough', 'chest_discomfort'),
@@ -19,8 +20,12 @@ def main(user_name):
     'diabetes': ('fatigue', 'high_hunger', 'messed_urnination_cycle'),
     'ebola': ('fever', 'stomach_pain', 'unexplained_bleeding'),
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
-    'lung cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
-    'stroke': ('numbness', 'trouble_walking', 'confusion')}
+    'lung_cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
+    'stroke': ('numbness', 'trouble_walking', 'confusion')
+    'heart_disease': ('neck_pain', 'numbness', 'chest_pressure' )
+    'small_pox': ('vomiting', 'fever', 'body_aches')
+    'hiv': ('chills', 'mouth_ulcers', 'night_sweats')
+    'tetanus': ('spasms', 'difficulty_swallowing', 'muscle_stiffness')}
 
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
@@ -83,7 +88,5 @@ def go_again(user_name):
         print("Feel better soon!")
 
     
-
-
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

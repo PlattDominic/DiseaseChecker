@@ -86,6 +86,7 @@ def go_again(user_name):
         main(user_name)
     elif again == "no" or again == "n":
         print("Feel better soon!")
+        exit()
 
     
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")

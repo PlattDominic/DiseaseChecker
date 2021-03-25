@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # main function that runs the main code for the application
-def main():
+def main(user_name):
     # A dictionary containing all the symptoms the user will type in
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore_throat", 
     "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
@@ -21,9 +21,10 @@ def main():
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
     'lung cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
     'stroke': ('numbness', 'trouble_walking', 'confusion')}
+
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
-    user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with "," type sym to list possible symptoms: ')
+    user_symptoms = input("\nHello {} what symptom(s) are you experiencing, seperate symptoms with ',' type sym to list possible symptoms: ".format(user_name))
     
     # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
@@ -41,7 +42,7 @@ def main():
             print("you wrote something that's not in our list of symptoms, please try again")
             del user_symptoms
             del symptoms_list
-            main()
+            main(user_name)
             break 
     
     # Make a list called possible_diseases, which will store
@@ -63,24 +64,26 @@ def main():
     
     if len(duplicate_diseases) < 1:
         print("\nYou only put one symptom, which might lead to unaccurate result")
-        print("The diseases, that you might have are: ", possible_diseases)
-        go_again()
+        print("The diseases, that you might have, are: ", possible_diseases)
+        go_again(user_name)
 
     #Converts a set into a list, so the data can be indexed
     #And also prints out what disease the user might have
     set_convert = list(duplicate_diseases)
-    print("\nA possible disease you might have: {}".format(set_convert[0]))
-    go_again()
+    print("A possible disease you might have: {}".format(set_convert[0]))
+    go_again(user_name)
 
 # If the user wants to go again this will make it restart the program
 # But if not it will give them a nice sending message
-def go_again():
+def go_again(user_name):
     again = input("\nWould you like to name more symptoms: ").lower()
     if again == "yes" or again == "y":
-        main()
+        main(user_name)
     elif again == "no" or again == "n":
         print("Feel better soon!")
 
     
-    
-main()
+
+
+user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
+main(user_name)

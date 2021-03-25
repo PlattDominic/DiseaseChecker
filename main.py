@@ -64,24 +64,23 @@ def main():
     if len(duplicate_diseases) < 1:
         print("You only put one symptom, which might lead to unaccurate result")
         print("The diseases, that you might have are: ", possible_diseases)
-        Go_Again()
+        go_again()
 
-    #Converts a set into a list, so the daya can be indexed
+    #Converts a set into a list, so the data can be indexed
     #And also prints out what disease the user might have
     set_convert = list(duplicate_diseases)
     print("A possible disease you might have: {}".format(set_convert[0]))
-
+    go_again()
 
 # If the user wants to go again this will make it restart the program
 # But if not it will give them a nice sending message
-def Go_Again():
-    again = input("Would you like to name more symptoms:")
-    if again == "yes":
+def go_again():
+    again = input("Would you like to name more symptoms:").lower()
+    if again == "yes" or again == "y":
         main()
-    elif again == "no":
+    elif again == "no" or again == "n":
         print("Feel better soon!")
 
     
     
 main()
-Go_Again()

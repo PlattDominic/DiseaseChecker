@@ -5,9 +5,9 @@ def main():
     # A dictionary containing all the symptoms the user will type in
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore throat", 
     "shortness of breath", "chest pain", "wheezing", "fatigue", "chest discomfort",
-     "headache", "messed urination cycle", "stomach pain", "unexplained bleeding",
-      "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss appetite", 
-      "numbness", "trouble walking", "confusion", "lost of scent"]
+    "headache", "messed urination cycle", "stomach pain", "unexplained bleeding",
+    "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss appetite", 
+    "numbness", "trouble walking", "confusion", "lost of scent"]
     
     # The dictionary that will contain all the possible diseases with their symtoms
     diseases = {
@@ -75,7 +75,7 @@ def main():
 # If the user wants to go again this will make it restart the program
 # But if not it will give them a nice sending message
 def go_again():
-    again = input("Would you like to name more symptoms:").lower()
+    again = input("Would you like to name more symptoms: ").lower()
     if again == "yes" or again == "y":
         main()
     elif again == "no" or again == "n":

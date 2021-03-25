@@ -81,6 +81,7 @@ def go_again(user_name):
         main(user_name)
     elif again == "no" or again == "n":
         print("Feel better soon!")
+        exit()
 
     
 

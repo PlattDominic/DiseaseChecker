@@ -69,13 +69,13 @@ def main():
     #Converts a set into a list, so the data can be indexed
     #And also prints out what disease the user might have
     set_convert = list(duplicate_diseases)
-    print("A possible disease you might have: {}".format(set_convert[0]))
+    print("\nA possible disease you might have: {}".format(set_convert[0]))
     go_again()
 
 # If the user wants to go again this will make it restart the program
 # But if not it will give them a nice sending message
 def go_again():
-    again = input("Would you like to name more symptoms: ").lower()
+    again = input("\nWould you like to name more symptoms: ").lower()
     if again == "yes" or again == "y":
         main()
     elif again == "no" or again == "n":

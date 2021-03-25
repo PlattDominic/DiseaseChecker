@@ -10,7 +10,7 @@ def main(user_name):
       "numbness", "trouble_walking", "confusion", "lost_of_scent", "neck_pain", "numbness", "chest_pressure",
       "vomiting", "body_aches", "chills", "mouth_ulcers", "night_sweats", "spasms", "difficulty_swallowing", "muscle_stiffness"]
     
-    # The dictionary that will contain all the possible diseases with their symtoms
+    # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
     'common_cold': ('cough', 'congestion', 'sneezing'), 
     'flu': ('cough', 'fever', 'sore_throat'),
@@ -21,10 +21,10 @@ def main(user_name):
     'ebola': ('fever', 'stomach_pain', 'unexplained_bleeding'),
     'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
     'lung_cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
-    'stroke': ('numbness', 'trouble_walking', 'confusion')
-    'heart_disease': ('neck_pain', 'numbness', 'chest_pressure' )
-    'small_pox': ('vomiting', 'fever', 'body_aches')
-    'hiv': ('chills', 'mouth_ulcers', 'night_sweats')
+    'stroke': ('numbness', 'trouble_walking', 'confusion'),
+    'heart_disease': ('neck_pain', 'numbness', 'chest_pressure'),
+    'small_pox': ('vomiting', 'fever', 'body_aches'),
+    'hiv': ('chills', 'mouth_ulcers', 'night_sweats'),
     'tetanus': ('spasms', 'difficulty_swallowing', 'muscle_stiffness')}
 
     
@@ -67,6 +67,8 @@ def main(user_name):
         if possible_diseases.count(disease) > 1:
             duplicate_diseases.add(disease)
     
+    # If the user types in only one symptom, it may lead to innacurate results
+    #It's encouraged that the user should put two or more symptoms
     if len(duplicate_diseases) < 1:
         print("\nYou only put one symptom, which might lead to unaccurate result")
         print("The diseases, that you might have, are: ", possible_diseases)
@@ -88,6 +90,6 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
-    
+# The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

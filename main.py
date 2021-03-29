@@ -15,7 +15,7 @@ def print_disease(disease):
 
     if disease.severity_level <= 2:
         print(low_severity+' ')
-    elif disease.severity_level > 2 and disease <= 4:
+    elif disease.severity_level > 2 and disease.severity_level <= 4:
         print(med_severity+' ')
     else:
         print(high_severity+' ')
@@ -43,7 +43,7 @@ def main(user_name):
     disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 5),
     disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4),
     disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5),
-    disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 4),
+    disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6),
     disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6),
     disease_model('stroke', ('numbness', 'trouble_walking', 'confusion'), 3),
     disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6),

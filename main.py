@@ -83,7 +83,7 @@ def main(user_name):
 # If the user wants to go again this will make it restart the program
 # But if not it will give them a nice sending message
 def go_again(user_name):
-    again = input("\nWould you like to name more symptoms: ").lower()
+    again = input("\nWould you like to name more symptoms [y or n]: ").lower()
     if again == "yes" or again == "y":
         main(user_name)
     elif again == "no" or again == "n":

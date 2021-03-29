@@ -126,7 +126,9 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
+# Print some covid data for user knowledge
 print_covid_data()
+
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

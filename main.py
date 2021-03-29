@@ -54,14 +54,14 @@ def main(user_name):
     disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3),
     disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 4),
     disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4),
-    disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5),
-    disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6),
-    disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6),
-    disease_model('stroke', ('numbness', 'trouble_walking', 'confusion'), 3),
-    disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6),
-    disease_model('small_pox', ('vomiting', 'fever', 'body_aches'), 4),
-    disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5),
-    disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 3)}
+    disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5, "https://www.mayoclinic.org/diseases-conditions/ebola-virus/symptoms-causes/syc-20356258"),
+    disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6, "https://www.mayoclinic.org/diseases-conditions/rabies/symptoms-causes/syc-20351821"),
+    disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6, "https://www.mayoclinic.org/diseases-conditions/lung-cancer/symptoms-causes/syc-20374620"),
+    disease_model('stroke', ('numbness', 'trouble_walking', 'confusion'), 3, "https://www.mayoclinic.org/diseases-conditions/stroke/symptoms-causes/syc-20350113"),
+    disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6, "https://www.mayoclinic.org/diseases-conditions/heart-disease/symptoms-causes/syc-20353118"),
+    disease_model('small_pox', ('vomiting', 'fever', 'body_aches'), 4, "https://www.mayoclinic.org/diseases-conditions/smallpox/symptoms-causes/syc-20353027"),
+    disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5, "https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"),
+    disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 3, "https://www.mayoclinic.org/diseases-conditions/tetanus/symptoms-causes/syc-20351625")}
 
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms

@@ -12,10 +12,11 @@ def print_covid_data():
 
 # this is the disease model
 class disease_model:
-    def __init__(self, name, symptoms, severity_level):
+    def __init__(self, name, symptoms, severity_level, about_link):
         self.name = name
         self.symptoms = symptoms
         self.severity_level = severity_level
+        self.about_link = about_link
 
 #This is a function that makes all the diseases print out in color based on low, medium, or high severity
 def print_disease(disease):
@@ -47,7 +48,7 @@ def main(user_name):
     
     # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
-    disease_model('common_cold', ('cough', 'congestion', 'sneezing'), 1), 
+    disease_model('common_cold', ('cough', 'congestion', 'sneezing'), 1, ), 
     disease_model('flu', ('cough', 'fever', 'sore_throat'), 2),
     disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3),
     disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3),

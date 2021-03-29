@@ -14,13 +14,15 @@ class disease_model:
         self.name = name
         self.symptoms = symptoms
         self.severity_level = severity_level
-        
+
+#This is a function that makes all the diseases print out in color based on low, medium, or high severity
 def print_disease(disease):
     low_severity = '\033[32m'
     med_severity = '\033[33m'
     high_severity = '\033[31m'
     default_col = '\033[0m'
 
+#This prints out the disease and it's color based on the severity. 1 and 2 = green, 3 and 4 = yellow, 5 and 6 = red
     if disease.severity_level <= 2:
         print("A possible disease you might have:"+low_severity, disease.name)
     elif disease.severity_level > 2 and disease.severity_level <= 4:

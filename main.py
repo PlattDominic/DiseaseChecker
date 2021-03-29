@@ -7,7 +7,21 @@ class disease_model:
         self.symptoms = symptoms
         self.severity_level = severity_level
         
-        
+def print_disease(disease):
+    low_severity = '\033[32m'
+    med_severity = '\033[33m'
+    high_severity = '\033[31m'
+    default_col = '\033[0m'
+
+    if disease.severity <= 2:
+        print("A possible disease you might have: ", +low_severity'{}'.format(disease.name))
+    elif disease.severity > 2 and disease <= 4:
+        print("A possible disease you might have: ", +med_severity'{}'.format(disease.name))
+    else:
+        print("A possible disease you might have: ", +high_severity'{}'.format(disease.name))
+    
+    print(+default_col' ')
+
 # main function that runs the main code for the application
 def main(user_name):
     # A dictionary containing all the symptoms the user will type in
@@ -98,9 +112,8 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
-a = list()
-a.append(disease_model("common cold", ("cough", "congestion", "sneezing"), 1))
-print(a[0].symptoms)
+
+
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

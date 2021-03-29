@@ -14,12 +14,13 @@ def print_disease(disease):
     default_col = '\033[0m'
 
     if disease.severity <= 2:
-        print("A possible disease you might have: ", +low_severity"{}".format(disease.name))
+        print(+low_severity' ')
     elif disease.severity > 2 and disease <= 4:
-        print("A possible disease you might have: ", +med_severity"{}".format(disease.name))
+        print(+med_severity' ')
     else:
-        print("A possible disease you might have: ", +high_severity"{}".format(disease.name))
+        print(+high_severity' ')
     
+    print("A possible disease you might have: {}".format(disease.name))
     print(+default_col' ')
 
 

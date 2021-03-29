@@ -25,15 +25,15 @@ def print_disease(disease):
     high_severity = '\033[31m'
     default_col = '\033[0m'
 
-#This prints out the disease and it's color based on the severity. 1 and 2 = green, 3 and 4 = yellow, 5 and 6 = red
+    #This prints out the disease and it's color based on the severity. 1 and 2 = green, 3 and 4 = yellow, 5 and 6 = red
     if disease.severity_level <= 2:
         print("A possible disease you might have:"+low_severity, disease.name)
     elif disease.severity_level > 2 and disease.severity_level <= 4:
         print("A possible disease you might have:"+med_severity, disease.name)
     else:
         print("A possible disease you might have:"+high_severity, disease.name)
-    
-    print(default_col+' ')
+    print(default_col+"To learn about this disease visit: {}".format(disease.about_link))
+
 
 
 # main function that runs the main code for the application

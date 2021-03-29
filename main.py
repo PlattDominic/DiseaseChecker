@@ -2,12 +2,12 @@
 import requests
 import json
 
-
+#This prints all the latest data about Covid-19
 def print_covid_data():
     raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
     covid_dict_data = dict(raw_data.json())
 
-    print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
+    print("\nThe current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 
 # this is the disease model
@@ -127,9 +127,11 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
-# Print some covid data for user knowledge
-print_covid_data()
-
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
+
+user_choice = input("\nWould you like to see the current global numbers for covid-19 [y or n]: ").lower()
+if user_choice == "y":
+    print_covid_data()
+
 main(user_name)

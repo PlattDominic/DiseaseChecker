@@ -13,9 +13,9 @@ def print_disease(disease):
     high_severity = '\033[31m'
     default_col = '\033[0m'
 
-    if disease.severity <= 2:
+    if disease.severity_level <= 2:
         print(low_severity+' ')
-    elif disease.severity > 2 and disease <= 4:
+    elif disease.severity_level > 2 and disease <= 4:
         print(med_severity+' ')
     else:
         print(high_severity+' ')
@@ -101,7 +101,7 @@ def main(user_name):
     #Converts a set into a list, so the data can be indexed
     #And also prints out what disease the user might have
     set_convert = list(duplicate_diseases)
-    print("A possible disease you might have: {}".format(set_convert[0]))
+    print_disease(set_convert[0])
     go_again(user_name)
 
 # If the user wants to go again this will make it restart the program

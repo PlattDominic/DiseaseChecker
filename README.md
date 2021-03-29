@@ -10,4 +10,7 @@
 - Rabies - Hallucinations, Anxiety, and Hydrophobia
 - Lung Cancer - Hoarseness, Loss of appetite, Coughing up Blood, and Shortness of breath
 - Srokes - Numbness, Trouble Walking, and Confusion
-
+- Heart_Disease - neck_pain, numbness, and chest_pressure
+- Small_Pox - vomiting, fever, and body_aches
+- HIV - chills, mouth_ulcers, and night_sweats
+- Tetanus - spasms, difficulty_swallowing, and muscle_stiffness

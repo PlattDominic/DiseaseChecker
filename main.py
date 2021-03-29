@@ -20,20 +20,20 @@ def main(user_name):
     
     # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
-    'common_cold': ('cough', 'congestion', 'sneezing'), 
-    'flu': ('cough', 'fever', 'sore_throat'),
-    'asthma': ('shortness_of_breath', 'chest_pain', 'wheezing'),
-    'bronchitis': ('fatigue', 'cough', 'chest_discomfort'),
-    'covid 19': ('cough', 'headache', 'fever', 'lost_of_scent'),
-    'diabetes': ('fatigue', 'high_hunger', 'messed_urnination_cycle'),
-    'ebola': ('fever', 'stomach_pain', 'unexplained_bleeding'),
-    'rabies': ('hallucinations', 'anxiety', 'hydrophobia'),
-    'lung_cancer': ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"),
-    'stroke': ('numbness', 'trouble_walking', 'confusion'),
-    'heart_disease': ('neck_pain', 'numbness', 'chest_pressure'),
-    'small_pox': ('vomiting', 'fever', 'body_aches'),
-    'hiv': ('chills', 'mouth_ulcers', 'night_sweats'),
-    'tetanus': ('spasms', 'difficulty_swallowing', 'muscle_stiffness')}
+    disease_model('common_cold', ('cough', 'congestion', 'sneezing'), 1), 
+    disease_model('flu', ('cough', 'fever', 'sore_throat'), 2),
+    disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3),
+    disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3),
+    disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 5),
+    disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4),
+    disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5),
+    disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 4),
+    disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6),
+    disease_model('stroke', ('numbness', 'trouble_walking', 'confusion'), 3),
+    disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6),
+    disease_model('small_pox', ('vomiting', 'fever', 'body_aches'), 4),
+    disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5),
+    disease_model('tetanus', ('spasms', ('difficulty_swallowing', 'muscle_stiffness'), 3)}
 
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
@@ -98,9 +98,6 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
-a = list()
-a.append(disease_model("common cold", ("cough", "congestion", "sneezing"), 1))
-print(a[0].symptoms)
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

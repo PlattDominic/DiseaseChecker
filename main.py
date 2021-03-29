@@ -7,7 +7,7 @@ def print_covid_data():
     raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
     covid_dict_data = dict(raw_data.json())
 
-    print("\nThe current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
+    print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 
 # this is the disease model
@@ -51,7 +51,7 @@ def main(user_name):
     disease_model('flu', ('cough', 'fever', 'sore_throat'), 2),
     disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3),
     disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3),
-    disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 5),
+    disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 4),
     disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4),
     disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5),
     disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6),
@@ -105,7 +105,7 @@ def main(user_name):
     # If the user types in only one symptom, it may lead to innacurate results
     #It's encouraged that the user should put two or more symptoms
     if len(duplicate_diseases) < 1:
-        print("\nYou only put one symptom, which might lead to unaccurate result")
+        print("\nWe had some trouble finding a disease with your symptoms, which might lead to unaccurate results")
         print("The diseases that you might have are: ")
         for disease in possible_diseases:
             print(disease.name)

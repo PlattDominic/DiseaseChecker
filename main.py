@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+import requests
+import json
 
+
+def print_covid_data():
+    raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
+    covid_dict_data = dict(raw_data.json())
+    print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
+    .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 
 class disease_model:
     def __init__(self, name, symptoms, severity_level):
@@ -115,6 +123,7 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
+print_covid_data()
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

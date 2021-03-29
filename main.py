@@ -6,6 +6,7 @@ import json
 def print_covid_data():
     raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
     covid_dict_data = dict(raw_data.json())
+    
     print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 

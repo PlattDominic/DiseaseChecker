@@ -2,7 +2,11 @@
 
 
 class disease_model:
-    def __init__():
+    def __init__(self, name, symptoms, severity_level):
+        self.name = name
+        self.symptoms = symptoms
+        self.severity_level = severity_level
+        
         
 # main function that runs the main code for the application
 def main(user_name):
@@ -94,6 +98,9 @@ def go_again(user_name):
         print("Feel better soon!")
         exit()
 
+a = list()
+a.append(disease_model("common cold", ("cough", "congestion", "sneezing"), 1))
+print(a[0].symptoms)
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 main(user_name)

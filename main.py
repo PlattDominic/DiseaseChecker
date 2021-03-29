@@ -94,7 +94,9 @@ def main(user_name):
     #It's encouraged that the user should put two or more symptoms
     if len(duplicate_diseases) < 1:
         print("\nYou only put one symptom, which might lead to unaccurate result")
-        print("The diseases, that you might have, are: ", possible_diseases)
+        print("The diseases that you might have are: ")
+        for disease in possible_diseases:
+            print(disease.name)
         go_again(user_name)
 
     #Converts a set into a list, so the data can be indexed

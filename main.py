@@ -32,6 +32,7 @@ def print_disease(disease):
         print("A possible disease you might have:"+med_severity, disease.name)
     else:
         print("A possible disease you might have:"+high_severity, disease.name)
+        
     print(default_col+"To learn about this disease visit: {}".format(disease.about_link))
 
 

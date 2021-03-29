@@ -14,14 +14,14 @@ def print_disease(disease):
     default_col = '\033[0m'
 
     if disease.severity <= 2:
-        print(+low_severity' ')
+        print(low_severity+' ')
     elif disease.severity > 2 and disease <= 4:
-        print(+med_severity' ')
+        print(med_severity+' ')
     else:
-        print(+high_severity' ')
+        print(high_severity+' ')
     
     print("A possible disease you might have: {}".format(disease.name))
-    print(+default_col' ')
+    print(default_col+' ')
 
 
 # main function that runs the main code for the application
@@ -49,7 +49,7 @@ def main(user_name):
     disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6),
     disease_model('small_pox', ('vomiting', 'fever', 'body_aches'), 4),
     disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5),
-    disease_model('tetanus', ('spasms', ('difficulty_swallowing', 'muscle_stiffness'), 3)}
+    disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 3)}
 
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms

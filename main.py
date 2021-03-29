@@ -62,7 +62,7 @@ def main(user_name):
     disease_model('heart_disease', ('neck_pain', 'numbness', 'chest_pressure'), 6, "https://www.mayoclinic.org/diseases-conditions/heart-disease/symptoms-causes/syc-20353118"),
     disease_model('small_pox', ('vomiting', 'fever', 'body_aches'), 4, "https://www.mayoclinic.org/diseases-conditions/smallpox/symptoms-causes/syc-20353027"),
     disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5, "https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"),
-    disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 3, "https://www.mayoclinic.org/diseases-conditions/tetanus/symptoms-causes/syc-20351625")}
+    disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 5, "https://www.mayoclinic.org/diseases-conditions/tetanus/symptoms-causes/syc-20351625")}
 
     
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms

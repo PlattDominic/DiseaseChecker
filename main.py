@@ -22,6 +22,7 @@ def print_disease(disease):
     
     print(+default_col' ')
 
+
 # main function that runs the main code for the application
 def main(user_name):
     # A dictionary containing all the symptoms the user will type in

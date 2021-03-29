@@ -14,11 +14,11 @@ def print_disease(disease):
     default_col = '\033[0m'
 
     if disease.severity <= 2:
-        print("A possible disease you might have: ", +low_severity'{}'.format(disease.name))
+        print("A possible disease you might have: ", +low_severity"{}".format(disease.name))
     elif disease.severity > 2 and disease <= 4:
-        print("A possible disease you might have: ", +med_severity'{}'.format(disease.name))
+        print("A possible disease you might have: ", +med_severity"{}".format(disease.name))
     else:
-        print("A possible disease you might have: ", +high_severity'{}'.format(disease.name))
+        print("A possible disease you might have: ", +high_severity"{}".format(disease.name))
     
     print(+default_col' ')
 
@@ -77,7 +77,7 @@ def main(user_name):
     possible_diseases = []
     for user_symp in symptoms_list:
         for disease in diseases:
-            if user_symp.replace(" ", "") in diseases[disease]:
+            if user_symp.replace(" ", "") in disease.symptoms:
                 possible_diseases.append(disease)
 
     # Makes a set named duplicate_diseases which will store

@@ -48,12 +48,12 @@ def main(user_name):
     
     # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
-    disease_model('common_cold', ('cough', 'congestion', 'sneezing'), 1, ), 
-    disease_model('flu', ('cough', 'fever', 'sore_throat'), 2),
-    disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3),
-    disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3),
-    disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 4),
-    disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4),
+    disease_model('common_cold', ('cough', 'congestion', 'sneezing'), 1, "https://www.mayoclinic.org/diseases-conditions/common-cold/symptoms-causes/syc-20351605"), 
+    disease_model('flu', ('cough', 'fever', 'sore_throat'), 2, "https://www.cdc.gov/flu/symptoms/symptoms.htm"),
+    disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3, "https://www.mayoclinic.org/diseases-conditions/asthma/symptoms-causes/syc-20369653"),
+    disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3, "https://www.mayoclinic.org/diseases-conditions/bronchitis/symptoms-causes/syc-20355566"),
+    disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 4, "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"),
+    disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4, "https://www.cdc.gov/diabetes/basics/symptoms.html"),
     disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5),
     disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6),
     disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6),

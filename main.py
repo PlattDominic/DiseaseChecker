@@ -27,12 +27,12 @@ class disease_model:
 
 def copy_to_system_clipboard(data):
     platform_info = platform.system().lower()
-
+ 
     try:
         if "linux" in platform_info:
             os.system('echo "{}" | xclip -selection clipboard'.format(data))
         elif "windows" in platform_info:
-            os.system('echo "{}" | clip'.format(data))
+            os.system('echo {} | clip'.format(data))
         elif "darwin" in platform_info:
             os.system('echo "{}" | pbcopy'.format(data))
         print("Link copied to clipboard")

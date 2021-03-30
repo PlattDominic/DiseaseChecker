@@ -126,7 +126,7 @@ def go_again(user_name):
     if again == "yes" or again == "y":
         main(user_name)
     elif again == "no" or again == "n":
-        print("Feel better soon!")
+        print("Feel better soon!\n")
         exit()
 
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 

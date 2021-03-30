@@ -37,6 +37,8 @@ def print_disease(disease):
 
     if disease.name == "covid 19":
         print("If you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")
+    elif disease.severity_level > 4:
+        print("You might have disease that can be very serious or life threatening")
 
 
 

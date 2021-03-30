@@ -2,6 +2,7 @@
 import webbrowser
 import requests
 import json
+import platform
 
 #This prints all the latest data about Covid-19
 def print_covid_data():
@@ -150,6 +151,7 @@ def go_again(user_name):
         print("You have entered an invalid choice, please try again")
         del again
         go_again(user_name)
+
 
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")

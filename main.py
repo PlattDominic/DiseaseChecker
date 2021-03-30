@@ -34,12 +34,14 @@ def print_disease(disease):
     else:
         print("A possible disease you might have:"+high_severity, disease.name)
 
+    # This asks the user if they would to open up the website if yes then the browser would open with the website
     print(default_col+"To learn about this disease visit: {}".format(disease.about_link))
     user_choice = input("Would you like to open this link in your broswer [y or n]: ").lower()
     if user_choice == "y":
         print("Opening link...")
         webbrowser.open(disease.about_link, new=0)
 
+    # Relays a message if the user supposedly has a disease over the severity level of 4 or if they have covid-19
     if disease.name == "covid 19":
         print("If you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")
     elif disease.severity_level > 4:

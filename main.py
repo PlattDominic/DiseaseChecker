@@ -35,6 +35,7 @@ def copy_to_system_clipboard(data):
             os.system('echo "{}" | clip'.format(data))
         elif "darwin" in platform_info:
             os.system('echo "{}" | pbcopy'.format(data))
+        print("Link copied to clipboard")
     except:
         print("An error occured when trying to copy link into clipboard\n")
 

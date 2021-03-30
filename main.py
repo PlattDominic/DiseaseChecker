@@ -113,10 +113,10 @@ def main(user_name):
     
     # prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
-        for sym in symptoms:
+        for sym in symptoms.sort():
             print("{}, ".format(sym))
         del user_symptoms
-        user_symptoms = input('What symptom(s) are you experiencing, seperate symptoms with ",": ')
+        user_symptoms = input('\nWhat symptom(s) are you experiencing, seperate symptoms with ",": ')
             
     # Stores the user symptoms into a list
     symptoms_list = user_symptoms.split(',')

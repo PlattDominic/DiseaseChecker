@@ -35,6 +35,9 @@ def print_disease(disease):
 
     print(default_col+"To learn about this disease visit: {}".format(disease.about_link))
 
+    if disease.name == "covid 19":
+        print("If you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")
+
 
 
 # main function that runs the main code for the application
@@ -44,8 +47,9 @@ def main(user_name):
     "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
      "headache", "messed_urination_cycle", "stomach_pain", "unexplained_bleeding",
       "hallucinations", "anxiety", "hydrophobia", "hoarseness", "loss_appetite", 
-      "numbness", "trouble_walking", "confusion", "lost_of_scent", "neck_pain", "numbness", "chest_pressure",
-      "vomiting", "body_aches", "chills", "mouth_ulcers", "night_sweats", "spasms", "difficulty_swallowing", "muscle_stiffness"]
+      "numbness", "trouble_walking", "confusion", "lost_of_scent", "neck_pain", 
+      "numbness", "chest_pressure", "vomiting", "body_aches", "chills", "mouth_ulcers",
+      "night_sweats", "spasms", "difficulty_swallowing", "muscle_stiffness", "high_hunger"]
     
     # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
@@ -54,7 +58,7 @@ def main(user_name):
     disease_model('asthma', ('shortness_of_breath', 'chest_pain', 'wheezing'), 3, "https://www.mayoclinic.org/diseases-conditions/asthma/symptoms-causes/syc-20369653"),
     disease_model('bronchitis', ('fatigue', 'cough', 'chest_discomfort'), 3, "https://www.mayoclinic.org/diseases-conditions/bronchitis/symptoms-causes/syc-20355566"),
     disease_model('covid 19', ('cough', 'headache', 'fever', 'lost_of_scent'), 4, "https://www.cdc.gov/coronavirus/2019-ncov/symptoms-testing/symptoms.html"),
-    disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urnination_cycle'), 4, "https://www.cdc.gov/diabetes/basics/symptoms.html"),
+    disease_model('diabetes', ('fatigue', 'high_hunger', 'messed_urination_cycle'), 4, "https://www.cdc.gov/diabetes/basics/symptoms.html"),
     disease_model('ebola', ('fever', 'stomach_pain', 'unexplained_bleeding'), 5, "https://www.mayoclinic.org/diseases-conditions/ebola-virus/symptoms-causes/syc-20356258"),
     disease_model('rabies', ('hallucinations', 'anxiety', 'hydrophobia'), 6, "https://www.mayoclinic.org/diseases-conditions/rabies/symptoms-causes/syc-20351821"),
     disease_model('lung_cancer', ('hoarseness', 'loss_appetite', 'cough', "shortness_of_breath"), 6, "https://www.mayoclinic.org/diseases-conditions/lung-cancer/symptoms-causes/syc-20374620"),
@@ -128,6 +132,10 @@ def go_again(user_name):
     elif again == "no" or again == "n":
         print("Feel better soon!\n")
         exit()
+    else:
+        print("You have entered an invalid choice, please try again")
+        del again
+        go_again(user_name)
 
 # The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")

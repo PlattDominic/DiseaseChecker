@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import webbrowser
 import requests
 import json
 
@@ -34,6 +35,10 @@ def print_disease(disease):
         print("A possible disease you might have:"+high_severity, disease.name)
 
     print(default_col+"To learn about this disease visit: {}".format(disease.about_link))
+    user_choice = input("Would you like to open this link in your broswer [y or n]: ").lower()
+    if user_choice == "y":
+        print("Opening link...")
+        webbrowser.open(disease.about_link, new=0)
 
     if disease.name == "covid 19":
         print("If you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")

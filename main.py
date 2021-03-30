@@ -40,12 +40,17 @@ def print_disease(disease):
     if user_choice == "y":
         print("Opening link...")
         webbrowser.open(disease.about_link, new=0)
+        del user_choice
 
     # Relays a message if the user supposedly has a disease over the severity level of 4 or if they have covid-19
     if disease.name == "covid 19":
         print("If you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")
     elif disease.severity_level > 4:
         print("You might have a disease that can be very serious or life threatening")
+        user_choice = input("Would you like to be shown hospitals near you [y or n]: ")
+        if user_choice == "y":
+            webbrowser.open("https://www.google.com/maps/search/hospital/", new=0)
+    
 
 
 

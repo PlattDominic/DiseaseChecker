@@ -3,6 +3,7 @@ import webbrowser
 import requests
 import json
 import platform
+import os
 
 #This prints all the latest data about Covid-19
 def print_covid_data():
@@ -19,6 +20,16 @@ class disease_model:
         self.symptoms = symptoms
         self.severity_level = severity_level
         self.about_link = about_link
+
+def copy_to_system_clipboard(data):
+    platform_info = platform.system().lower()
+
+    if "linux" in platform_info:
+        os.system('echo "{}" | xclip -selection clipboard'.format(data))
+    elif "windows" in platform_info:
+        os.system('echo "{}" | clip'.format(data))
+    elif "darwin" in platform_info:
+        os.system('echo "{}" | pbcopy'.format(data))
 
 #This is a function that makes all the diseases print out in color based on low, medium, or high severity
 def print_disease(disease):
@@ -42,13 +53,18 @@ def print_disease(disease):
         print("Opening link...")
         webbrowser.open(disease.about_link, new=0)
         del user_choice
+    else:
+        user_choice = input("Would you like to copy this link into your clipboard [y or n]: ").lower()
+        if user_choice == "y":
+            copy_to_system_clipboard(disease.about_link)
+            
 
     # Relays a message if the user supposedly has a disease over the severity level of 4 or if they have covid-19
     if disease.name == "covid 19":
         print("\nIf you believe you have covid-19 make sure to wear a mask, stay at home, and get tested at any local hospital")
     elif disease.severity_level > 4:
         print("\nYou might have a disease that can be very serious or life threatening")
-        user_choice = input("Would you like to be shown hospitals near you [y or n]: ")
+        user_choice = input("Would you like to be shown hospitals near you [y or n]: ").lower()
         if user_choice == "y":
             webbrowser.open("https://www.google.com/maps/search/hospital/", new=0)
     

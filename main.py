@@ -7,8 +7,12 @@ import os
 
 #This prints all the latest data about Covid-19
 def print_covid_data():
-    raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
-    covid_dict_data = dict(raw_data.json())
+    try:
+        raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
+        covid_dict_data = dict(raw_data.json())
+    except:
+        print("An error occured when trying to get covid-19 data")
+        return
 
     print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
@@ -24,12 +28,15 @@ class disease_model:
 def copy_to_system_clipboard(data):
     platform_info = platform.system().lower()
 
-    if "linux" in platform_info:
-        os.system('echo "{}" | xclip -selection clipboard'.format(data))
-    elif "windows" in platform_info:
-        os.system('echo "{}" | clip'.format(data))
-    elif "darwin" in platform_info:
-        os.system('echo "{}" | pbcopy'.format(data))
+    try:
+        if "linux" in platform_info:
+            os.system('echo "{}" | xclip -selection clipboard'.format(data))
+        elif "windows" in platform_info:
+            os.system('echo "{}" | clip'.format(data))
+        elif "darwin" in platform_info:
+            os.system('echo "{}" | pbcopy'.format(data))
+    except:
+        print("An error occured when trying to copy link into clipboard\n")
 
 #This is a function that makes all the diseases print out in color based on low, medium, or high severity
 def print_disease(disease):

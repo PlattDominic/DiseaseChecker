@@ -1,23 +1,29 @@
 #!/usr/bin/python3
+
+# Import the library's required by the program
 import webbrowser
 import requests
 import json
 import platform
 import os
 
-# This prints all the latest data about Covid-19
+# Prints the latest Covid-19 data
 def print_covid_data():
     try:
+        # Get's the HTTP response from the Covid-19 data API
         raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
+
+        # Make a python dict using the HTTP response json data
         covid_dict_data = dict(raw_data.json())
     except:
         print("An error occured when trying to get covid-19 data")
         return
 
+    # Print's the Covid data using the data from the dict created before
     print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 
-# This is the disease model
+# The disease model that will be used throughout the applicaton
 class disease_model:
     def __init__(self, name, symptoms, severity_level, about_link):
         self.name = name
@@ -25,10 +31,13 @@ class disease_model:
         self.severity_level = severity_level
         self.about_link = about_link
 
+# Copies data to user's system clipboard, this function is cross-platform
 def copy_to_system_clipboard(data):
+    # Get the user's platform information 
     platform_info = platform.system().lower()
  
     try:
+        # Copies data to system's clipboard using the right command for system
         if "linux" in platform_info:
             os.system('echo "{}" | xclip -selection clipboard'.format(data))
         elif "windows" in platform_info:
@@ -39,7 +48,7 @@ def copy_to_system_clipboard(data):
     except:
         print("An error occured when trying to copy link into clipboard\n")
 
-# This is a function that makes all the diseases print out in color based on low, medium, or high severity
+# Prints the possible disease the user might have and ask's them questions
 def print_disease(disease):
     low_severity = '\033[32m'
     med_severity = '\033[33m'
@@ -162,26 +171,43 @@ def main(user_name):
     print_disease(set_convert[0])
     go_again(user_name)
 
-# If the user wants to go again this will make it restart the program
-# But if not it will give them a nice sending message
+
+# Function that asks the user if they would want to run the appplication again
+# This takes in user's name so, it can pass it through the main function if the
+# User want's to rerun it
 def go_again(user_name):
+    # Get's the user input if they would like to rerun the application
     again = input("\nWould you like to name more symptoms [y or n]: ").lower()
+
+    # If the user put in a input of yes, rerun the main function passing
+    # The user's name into it
     if again == "yes" or again == "y":
         main(user_name)
+    
+    # If they put a input of no, print a goodbye message and exit/terminate the program
     elif again == "no" or again == "n":
         print("Feel better soon!\n")
         exit()
+
+    # If they put a input of anything else, tell them that they put invalid input
+    # Delete that input and rerun the function
     else:
         print("You have entered an invalid choice, please try again")
         del again
         go_again(user_name)
 
 
-# The program will ask the user to input their name. This is to make it user friendly and get the program to know the user 
+# The program will ask the user to input their name. This is to make it user friendly 
+# And get the program to know the user 
 user_name = input("\nHello and welcome to the Disease Checker Program! We'd love to get to know you so could you please tell us your name: ")
 
+# Asks the user if they want to get the lastest Covid-19 numbers, if the type in 'y'
+# Run the print_covid_data() function
 user_choice = input("\nWould you like to see the current global numbers for covid-19 [y or n]: ").lower()
 if user_choice == "y":
     print_covid_data()
 
+
+# Run's the main function passing user_name into it, this is the function
+# That will run the main application
 main(user_name)

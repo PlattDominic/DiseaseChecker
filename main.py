@@ -90,7 +90,7 @@ def print_disease(disease):
 
 # Main function that runs the main code for the application
 def main(user_name):
-    # A dictionary containing all the symptoms the user will type in
+    # A list that contains all the possible symptoms the user can enter
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore_throat", 
     "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
      "headache", "messed_urination_cycle", "stomach_pain", "unexplained_bleeding",

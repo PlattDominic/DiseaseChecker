@@ -90,7 +90,7 @@ def print_disease(disease):
 
 # Main function that runs the main code for the application
 def main(user_name):
-    # A dictionary containing all the symptoms the user will type in
+    # A list that contains all the possible symptoms the user can enter
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore_throat", 
     "shortness_of_breath", "chest_pain", "wheezing", "fatigue", "chest_discomfort",
      "headache", "messed_urination_cycle", "stomach_pain", "unexplained_bleeding",
@@ -158,7 +158,7 @@ def main(user_name):
     
     # If the user types in only one symptom, it may lead to innacurate results
     # It's encouraged that the user should put two or more symptoms
-    if len(duplicate_diseases) < 1:The del keywo
+    if len(duplicate_diseases) < 1:
         print("\nWe had some trouble finding a disease with your symptoms, which might lead to unaccurate results")
         print("The diseases that you might have are: ")
         for disease in possible_diseases:

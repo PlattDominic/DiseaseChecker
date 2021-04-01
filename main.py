@@ -5,7 +5,7 @@ import json
 import platform
 import os
 
-#This prints all the latest data about Covid-19
+# This prints all the latest data about Covid-19
 def print_covid_data():
     try:
         raw_data = requests.get("https://coronavirus-19-api.herokuapp.com/all")
@@ -17,7 +17,7 @@ def print_covid_data():
     print("The current global Covid-19 numbers are cases: {}, deaths: {}, recovered: {}"
     .format(covid_dict_data["cases"], covid_dict_data["deaths"], covid_dict_data["recovered"]))
 
-# this is the disease model
+# This is the disease model
 class disease_model:
     def __init__(self, name, symptoms, severity_level, about_link):
         self.name = name
@@ -39,14 +39,14 @@ def copy_to_system_clipboard(data):
     except:
         print("An error occured when trying to copy link into clipboard\n")
 
-#This is a function that makes all the diseases print out in color based on low, medium, or high severity
+# This is a function that makes all the diseases print out in color based on low, medium, or high severity
 def print_disease(disease):
     low_severity = '\033[32m'
     med_severity = '\033[33m'
     high_severity = '\033[31m'
     default_col = '\033[0m'
 
-    #This prints out the disease and it's color based on the severity. 1 and 2 = green, 3 and 4 = yellow, 5 and 6 = red
+    # This prints out the disease and it's color based on the severity. 1 and 2 = green, 3 and 4 = yellow, 5 and 6 = red
     if disease.severity_level <= 2:
         print("A possible disease you might have:"+low_severity, disease.name)
     elif disease.severity_level > 2 and disease.severity_level <= 4:
@@ -79,7 +79,7 @@ def print_disease(disease):
 
 
 
-# main function that runs the main code for the application
+# Main function that runs the main code for the application
 def main(user_name):
     # A dictionary containing all the symptoms the user will type in
     symptoms = ["cough", "sneezing", "congestion", "fever", "sore_throat", 
@@ -111,7 +111,7 @@ def main(user_name):
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
     user_symptoms = input("\nHello {} what symptom(s) are you experiencing, seperate symptoms with ',' type sym to list possible symptoms: ".format(user_name))
     
-    # prints out all available symptoms in an organized format
+    # Prints out all available symptoms in an organized format
     if user_symptoms == "sym": 
         for sym in symptoms:
             print("{}, ".format(sym))
@@ -148,7 +148,7 @@ def main(user_name):
             duplicate_diseases.add(disease)
     
     # If the user types in only one symptom, it may lead to innacurate results
-    #It's encouraged that the user should put two or more symptoms
+    # It's encouraged that the user should put two or more symptoms
     if len(duplicate_diseases) < 1:
         print("\nWe had some trouble finding a disease with your symptoms, which might lead to unaccurate results")
         print("The diseases that you might have are: ")
@@ -156,8 +156,8 @@ def main(user_name):
             print(disease.name)
         go_again(user_name)
 
-    #Converts a set into a list, so the data can be indexed
-    #And also prints out what disease the user might have
+    # Converts a set into a list, so the data can be indexed
+    # And also prints out what disease the user might have
     set_convert = list(duplicate_diseases)
     print_disease(set_convert[0])
     go_again(user_name)

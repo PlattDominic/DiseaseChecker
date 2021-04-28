@@ -153,7 +153,7 @@ def main(user_name):
     # We don't want duplicate items
     duplicate_diseases = set()
     for disease in possible_diseases:
-        if possible_diseases.count(disease) > 1:
+        if possible_diseases.count(disease) > 1: 
             duplicate_diseases.add(disease)
     
     # If the user types in only one symptom, it may lead to innacurate results

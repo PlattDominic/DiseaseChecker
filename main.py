@@ -98,6 +98,7 @@ def main(user_name):
       "numbness", "trouble_walking", "confusion", "lost_of_scent", "neck_pain", 
       "numbness", "chest_pressure", "vomiting", "body_aches", "chills", "mouth_ulcers",
       "night_sweats", "spasms", "difficulty_swallowing", "muscle_stiffness", "high_hunger"]
+    symptoms.sort()
     
     # The dictionary that will contain all the possible diseases with their symptoms
     diseases = {
@@ -116,13 +117,12 @@ def main(user_name):
     disease_model('hiv', ('chills', 'mouth_ulcers', 'night_sweats'), 5, "https://www.mayoclinic.org/diseases-conditions/hiv-aids/symptoms-causes/syc-20373524"),
     disease_model('tetanus', ('spasms', 'difficulty_swallowing', 'muscle_stiffness'), 5, "https://www.mayoclinic.org/diseases-conditions/tetanus/symptoms-causes/syc-20351625")}
 
-    
     # Get's the symptoms(s) the user is experiecing, or list's all the symptoms
     user_symptoms = input("\nHello {} what symptom(s) are you experiencing, seperate symptoms with ',' type sym to list possible symptoms: ".format(user_name))
-    
+
     # Prints out all available symptoms in an organized format
-    if user_symptoms == "sym": 
-        for sym in symptoms.sort():
+    if user_symptoms == "sym":
+        for sym in symptoms:
             print("{}, ".format(sym))
         del user_symptoms
         user_symptoms = input('\nWhat symptom(s) are you experiencing, seperate symptoms with ",": ')
